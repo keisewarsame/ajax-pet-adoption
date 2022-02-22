@@ -7,6 +7,9 @@
    <style>
        @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
       
+      html {
+        background-color: #8febf2;
+      }
        #myForm div{
         margin-bottom:2%;
         }  
@@ -14,7 +17,7 @@
         .petName {
           font-family: 'Courgette', cursive;
           font-size: 25px;
-          background-color: #bf7649;
+          background-color: #5f6bed;
         }
    </style>
    <script src="https://code.jquery.com/jquery-latest.js"></script>
@@ -23,7 +26,6 @@
 <h2>AJAX Pet Adoption Agency</h2>
 <div id="output">
 <p>This is an AJAX-based form, which gives the user a series of 3 radio questions and a textbox that prompts the user to name their pet. There is a different pet for every possible combination, so feel free to play around! These questions appear one at a time, and the data is transmitted to a server-side page via AJAX. This project uses the jQuery library (i.e. .get(), .done(), .fail()) for processing and transmitting the data.</p>
-<p>This page is an application that allows users to choose a pet to adopt based on their likings! The following questions will allow the user to 'pick a pet' for adoption based upon an either/or scenario, and each question is required to be filled out before submitting the application. Once the user makes the selections, the website hides the form and reveals the chosen pet to the user, with a picture and a description of their new pet!</p>
 <p>Choose below to pick a pet:</p>
 <form id="myForm" action="" method="get">
    <div id="pet_feels">
