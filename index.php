@@ -5,20 +5,28 @@
    <meta name="robots" content="noindex,nofollow">
    <title>AJAX Pet Adoption Agency</title>
    <style>
-       @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Smokum&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
       
-      html {
-        background-color: #8febf2;
+     #myForm div{
+      margin-bottom:2%;
+      }  
+      /*changes font and font size and highlights the pet name in the output*/
+      .petName {
+        font-family: 'Smokum', cursive;
+        font-size: 25px;
+        background-color: #ccc;
       }
-       #myForm div{
-        margin-bottom:2%;
-        }  
-        /*changes font and font size and highlights the pet name in the output*/
-        .petName {
-          font-family: 'Courgette', cursive;
-          font-size: 25px;
-          background-color: #5f6bed;
-        }
+     
+     .fontS {
+       font-family: 'Permanent Marker', cursive;
+       font-size: 15px;
+     }
+
+     body {
+       margin-left: 1.5em;
+     }
+     
    </style>
    <script src="https://code.jquery.com/jquery-latest.js"></script>
 </head>
@@ -96,7 +104,7 @@
             var output = ""; //a string that will capture all the information from AJAX page and from the form
             //135
             if(feels == "fluffy" && likes == "petted" && eats == "carrots"){
-              pet = "rabbit";
+              pet = "bermese";
             }//136
             else if(feels == "fluffy" && likes == "petted" && eats == "pets"){
               pet = "bad-dog";
@@ -105,7 +113,7 @@
               pet = "golden";
             }//146
             else if(feels == "fluffy" && likes == "ridden" && eats == "pets"){
-              pet = "greyhound";
+              pet = "bulldog";
             }//235
             else if(feels == "scaly" && likes == "petted" && eats == "carrots"){
               pet = "bird";
@@ -119,10 +127,10 @@
             else if(feels == "scaly" && likes == "ridden" && eats == "pets"){
               pet = "velociraptor";
             }
-            //this titleCases the output of the name of the pet that the user inputted.
+            //this titleCases the output of the name of the pet that the user inputted. <span class = "fontS"></span>
             petName = titleCase(petName);
             //the span class is created here, so that we can refer to it in the <style> tag for css
-            output += `<p>Meet <span class="petName">${petName}</span>! ${petName} is a ${feels} ${pet} that likes to be ${likes}, just like you wanted! On your next trip to the grocery store, make sure you grab some ${eats} on the way out because that's their favorite food!</p> <p>Congratulations on your new companion, I wish you both happiness!</p>`
+            output += `<p>Meet <span class="petName">${petName}</span>! <br><span class = "fontS">${petName}</span> is a <span class = "fontS">${feels}</span>  <span class = "fontS">${pet}</span> that likes to be <span class = "fontS">${likes}</span>. <br>Their favorite food is <span class = "fontS">${eats}</span> so make sure to stock up on it!</p> <p>Have fun with your new ${pet}!!</p>`
             /*
             output += `<p>Your pet's name is ${petName}.</p>`;
             output += `<p>Your pet is a ${pet}.</p>`;
